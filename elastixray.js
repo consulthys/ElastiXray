@@ -135,6 +135,7 @@ emitter.on('parse', function(params) {
                 params.fields[dottedName] = {
                     nameParts: nameParts,
                     dottedName: dottedName,
+                    type: type,
                     subfield: sub,
                     analyzer: (fieldDef.analyzer || 'standard'),
                     search_analyzer: (fieldDef.search_analyzer || fieldDef.analyzer || 'standard'),
@@ -145,6 +146,7 @@ emitter.on('parse', function(params) {
                 params.fields[dottedName] = {
                     nameParts: nameParts,
                     dottedName: dottedName,
+                    type: type,
                     subfield: sub,
                     normalizer: fieldDef.normalizer,
                     sampleValue: getValue(params.sample, sub ? nameParts.slice(0, nameParts.length - 1) : nameParts)
@@ -226,6 +228,7 @@ emitter.on('results', function(params) {
         if (field.sampleValue) {
             if (field.analyzer) {
                 console.log(key + ':');
+                console.log('   type            : ' + field.type);
                 console.log('   analyzer        : ' + field.analyzer);
                 console.log('   sample          : ' + JSON.stringify(field.sampleValue));
                 console.log('   tokens          : ' + JSON.stringify(field.analyzerTokens));
@@ -233,6 +236,7 @@ emitter.on('results', function(params) {
             }
             if (field.search_analyzer) {
                 console.log(key + ':');
+                console.log('   type            : ' + field.type);
                 console.log('   search_analyzer : ' + field.search_analyzer);
                 console.log('   sample          : ' + JSON.stringify(field.sampleValue));
                 console.log('   tokens          : ' + JSON.stringify(field.search_analyzerTokens));
@@ -240,6 +244,7 @@ emitter.on('results', function(params) {
             }
             if (field.normalizer) {
                 console.log(key + ':');
+                console.log('   type            : ' + field.type);
                 console.log('   normalizer      : ' + field.normalizer);
                 console.log('   sample          : ' + JSON.stringify(field.sampleValue));
                 console.log('   tokens          : ' + JSON.stringify(field.normalizerTokens));
