@@ -1,9 +1,18 @@
 # ElastiXray
 X-Ray tool that shows the details of the Elasticsearch analysis process.
 
+## Why ElastiXray?
+
+ * The [Analyze API](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-analyze.html) is great but it only runs one-shot analysis on sample data
+ * [Cerebro](https://github.com/lmenezes/cerebro) is a fantastic tool that provides an Analysis tab and improves a great deal the ease of use of the Analyze API.
+ * [Kibana](https://www.elastic.co/products/kibana) doesn't provide any feature built upon the Analyze API.
+ * [elyzer](https://github.com/o19s/elyzer) is a great tool, but it aims at showing what happens during each step of the analysis process and does not work with all built-in analyzers.
+ 
+Enter Elastixray...
+
 ## Description
 
-ElastiXray allows one to retrieve a document from any index and shows how all of its textual content is being analyzed and indexed by Elasticsearch. This tool is a weapon of mass-analysis and heavily leverages the [Analyze API](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-analyze.html) in order to show how a full document is analyzed instead of having to do it field by field.
+ElastiXray allows one to retrieve a document from any index and shows how all of its textual content is being analyzed and indexed by Elasticsearch. ElastiXray is a weapon of mass-analysis and heavily leverages the [Analyze API](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-analyze.html) in order to show how a full document is analyzed instead of having to do it field by field.
 
 ## Quick example
 
@@ -176,5 +185,6 @@ So, ElastiXray will retrieve each `text`/`keyword` field from the document at an
 ## Setup
 
 Simply install the NPM module
+
 `$> npm install elastixray`
 
