@@ -8,7 +8,7 @@ X-Ray tool that shows the details of the Elasticsearch analysis process.
  * [Kibana](https://www.elastic.co/products/kibana) doesn't provide any feature built upon the Analyze API.
  * [elyzer](https://github.com/o19s/elyzer) is a great tool, but it aims at showing what happens during each step of the analysis process and does not work with all built-in analyzers.
  
-Enter Elastixray...
+Enter ElastiXray...
 
 ## Description
 
