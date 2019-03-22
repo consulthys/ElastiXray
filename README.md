@@ -101,7 +101,7 @@ PUT test
 }
 ```
 
-And the sample document we want to anaylze looks like this:
+And the sample document we want to analyze looks like this:
 ```
 PUT test/doc/1
 {
