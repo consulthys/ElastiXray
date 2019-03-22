@@ -3,7 +3,7 @@ X-Ray tool that shows the details of the Elasticsearch analysis process.
 
 ## Description
 
-ElastiXray allows one to retrieve a document from any index and shows how all its textual field values are being analyzed and indexed by Elasticsearch.
+ElastiXray allows one to retrieve a document from any index and shows how all of its textual content is being analyzed and indexed by Elasticsearch. This tool is a weapon of mass-analysis and heavily leverages the [Analyze API](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-analyze.html) in order to show how a full document is analyzed instead of having to do it field by field.
 
 ## Quick example
 
