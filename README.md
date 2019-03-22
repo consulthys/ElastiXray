@@ -7,6 +7,7 @@ X-Ray tool that shows the details of the Elasticsearch analysis process.
  * [Cerebro](https://github.com/lmenezes/cerebro) is a fantastic tool that provides an Analysis tab and improves a great deal the ease of use of the Analyze API.
  * [Kibana](https://www.elastic.co/products/kibana) doesn't provide any feature built upon the Analyze API.
  * [elyzer](https://github.com/o19s/elyzer) is a great tool, but it aims at showing what happens during each step of the analysis process and does not work with all built-in analyzers.
+ * [inquisitor](https://github.com/polyfractal/elasticsearch-inquisitor) was a nice tool that went into a similar direction, but it's no longer maintained.
  
 Enter ElastiXray...
 
@@ -214,5 +215,6 @@ Options
   -x, --index string     The index of the document to analyze                    
   -t, --type string      The type of the document to analyze (defaults to "doc") 
   -i, --id string        The ID of the document to analyze                       
+  -f, --format string    The output format (console, json, yaml)                 
   -h, --help             Usage help                                              
 ```
