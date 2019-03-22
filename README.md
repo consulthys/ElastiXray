@@ -122,56 +122,67 @@ If we run ElastiXray against that document:
 We would get the following output
 ```
 description:
+   type            : text
    analyzer        : standard
    sample          : "With built-in Alexa voice service, ecobee4 can listen to your voice commands and respond. Have it set a timer, read you the news, adjust the temperature, and more. It also works well with other Alexa Devices by supporting ESP, so that only the device closest to you responds to your commands. It also comes with a room sensor that helps manage hot or cold spots in your home, delivering comfort in the rooms that matter. And because they can detect occupancy, they can automatically enable the right mode on your ecobee4 for energy savings when it senses no one is home."
    tokens          : ["with","built","in","alexa","voice","service","ecobee4","can","listen","to","your","voice","commands","and","respond","have","it","set","a","timer","read","you","the","news","adjust","the","temperature","and","more","it","also","works","well","with","other","alexa","devices","by","supporting","esp","so","that","only","the","device","closest","to","you","responds","to","your","commands","it","also","comes","with","a","room","sensor","that","helps","manage","hot","or","cold","spots","in","your","home","delivering","comfort","in","the","rooms","that","matter","and","because","they","can","detect","occupancy","they","can","automatically","enable","the","right","mode","on","your","ecobee4","for","energy","savings","when","it","senses","no","one","is","home"]
 
 description:
+   type            : text
    search_analyzer : standard
    sample          : "With built-in Alexa voice service, ecobee4 can listen to your voice commands and respond. Have it set a timer, read you the news, adjust the temperature, and more. It also works well with other Alexa Devices by supporting ESP, so that only the device closest to you responds to your commands. It also comes with a room sensor that helps manage hot or cold spots in your home, delivering comfort in the rooms that matter. And because they can detect occupancy, they can automatically enable the right mode on your ecobee4 for energy savings when it senses no one is home."
    tokens          : ["with","built","in","alexa","voice","service","ecobee4","can","listen","to","your","voice","commands","and","respond","have","it","set","a","timer","read","you","the","news","adjust","the","temperature","and","more","it","also","works","well","with","other","alexa","devices","by","supporting","esp","so","that","only","the","device","closest","to","you","responds","to","your","commands","it","also","comes","with","a","room","sensor","that","helps","manage","hot","or","cold","spots","in","your","home","delivering","comfort","in","the","rooms","that","matter","and","because","they","can","detect","occupancy","they","can","automatically","enable","the","right","mode","on","your","ecobee4","for","energy","savings","when","it","senses","no","one","is","home"]
 
 product.id:
+   type            : text
    analyzer        : classic
    sample          : "EB-STATE4-01 4D-1"
    tokens          : ["eb-state4-01","4d-1"]
 
 product.id:
+   type            : text
    search_analyzer : classic
    sample          : "EB-STATE4-01 4D-1"
    tokens          : ["eb-state4-01","4d-1"]
 
 product.name:
+   type            : text
    analyzer        : standard
    sample          : "ecobee4 Smart Thermostat with Built-In Alexa, Room Sensor Included"
    tokens          : ["ecobee4","smart","thermostat","with","built","in","alexa","room","sensor","included"]
 
 product.name:
+   type            : text
    search_analyzer : standard
    sample          : "ecobee4 Smart Thermostat with Built-In Alexa, Room Sensor Included"
    tokens          : ["ecobee4","smart","thermostat","with","built","in","alexa","room","sensor","included"]
 
 product.name.exact:
+   type            : keyword
    normalizer      : lowercase
    sample          : "ecobee4 Smart Thermostat with Built-In Alexa, Room Sensor Included"
    tokens          : ["ecobee4 smart thermostat with built-in alexa, room sensor included"]
 
 product.name.prefixes:
+   type            : text
    analyzer        : prefix
    sample          : "ecobee4 Smart Thermostat with Built-In Alexa, Room Sensor Included"
    tokens          : ["e","ec","eco","ecob","ecobe","s","sm","sma","smar","smart","t","th","the","ther","therm","w","wi","wit","with","b","bu","bui","buil","built","a","al","ale","alex","alexa","r","ro","roo","room","s","se","sen","sens","senso","i","in","inc","incl","inclu"]
 
 product.name.prefixes:
+   type            : text
    search_analyzer : standard
    sample          : "ecobee4 Smart Thermostat with Built-In Alexa, Room Sensor Included"
    tokens          : ["ecobee4","smart","thermostat","with","built","in","alexa","room","sensor","included"]
 
 product.name.stemmed:
+   type            : text
    analyzer        : english
    sample          : "ecobee4 Smart Thermostat with Built-In Alexa, Room Sensor Included"
    tokens          : ["ecobee4","smart","thermostat","built","alexa","room","sensor","includ"]
 
 product.name.stemmed:
+   type            : text
    search_analyzer : english
    sample          : "ecobee4 Smart Thermostat with Built-In Alexa, Room Sensor Included"
    tokens          : ["ecobee4","smart","thermostat","built","alexa","room","sensor","includ"]
