@@ -188,3 +188,20 @@ Simply install the NPM module
 
 `$> npm install elastixray`
 
+## Usage
+
+```
+$> node elastixray.js --help
+
+ElastiXray
+
+  X-Ray tool that shows the details of the Elasticsearch analysis process. 
+
+Options
+
+  -c, --cluster string   The Elasticsearch cluster to connect to                 
+  -x, --index string     The index of the document to analyze                    
+  -t, --type string      The type of the document to analyze (defaults to "doc") 
+  -i, --id string        The ID of the document to analyze                       
+  -h, --help             Usage help                                              
+```
