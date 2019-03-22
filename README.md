@@ -117,7 +117,7 @@ PUT test/doc/1
 
 If we run ElastiXray against that document:
 
-`$> node elastixray.js localhost:9200 test/doc/1`
+`$> node elastixray.js -c localhost:9200 -x test -t doc -i 1`
 
 We would get the following output
 ```
