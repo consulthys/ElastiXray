@@ -27,13 +27,6 @@ const sections = [
                 description: 'The index of the document to analyze'
             },
             {
-                name: 'type',
-                alias: 't',
-                type: String,
-                defaultValue: 'doc',
-                description: 'The type of the document to analyze (defaults to "doc")'
-            },
-            {
                 name: 'id',
                 alias: 'i',
                 type: String,
@@ -66,11 +59,8 @@ if (!options.index || !options.id) {
 }
 // assert all good, let's go...
 
-const elasticsearch = require('elasticsearch');
-const esClient = new elasticsearch.Client({
-    hosts: options.cluster,
-    log: 'error'
-});
+const { Client } = require('@elastic/elasticsearch');
+const esClient = new Client({ node: options.cluster });
 
 ////////////////////////////////////////////
 // 1. retrieve the index settings/mappings
@@ -78,10 +68,9 @@ const esClient = new elasticsearch.Client({
 emitter.on('get-mapping', function(params) {
     esClient.indices.getMapping({
         index: params.index,
-        type: params.type
     }, function(error, resp) {
 
-        params.obj = resp[params.index].mappings[params.type].properties;
+        params.obj = resp.body[params.index].mappings.properties;
         emitter.emit('get-document', params);
     });
 });
@@ -92,11 +81,10 @@ emitter.on('get-mapping', function(params) {
 emitter.on('get-document', function(params) {
     esClient.get({
         index: params.index,
-        type: params.type,
         id: params.id
     }, function(error, resp) {
 
-        params.sample = resp._source;
+        params.sample = resp.body._source;
         emitter.emit('parse', params);
     });
 });
@@ -210,8 +198,8 @@ emitter.on('analyze', function(params) {
         body: body
     }, function (error, resp) {
 
-        if (resp.tokens.length) {
-            params.fields[next.name][next.realType + 'Tokens'] = resp.tokens.map(it => it.token);
+        if (resp.body.tokens.length) {
+            params.fields[next.name][next.realType + 'Tokens'] = resp.body.tokens.map(it => it.token);
         }
 
         emitter.emit('analyze', params);
@@ -259,7 +247,6 @@ emitter.on('results', function(params) {
 ////////////////////////////////////////////
 emitter.emit('get-mapping', {
     index: options.index,
-    type: options.type,
     id: options.id,
     ctx: []
 });

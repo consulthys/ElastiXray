@@ -21,9 +21,9 @@
   },
   "homepage": "https://github.com/consulthys/ElastiXray",
   "dependencies": {
+    "@elastic/elasticsearch": "^7.6.1",
     "command-line-args": "^5.0.2",
     "command-line-usage": "^5.0.5",
-    "elasticsearch": "^15.4.1",
     "underscore": "^1.9.1"
   }
 }
