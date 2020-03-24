@@ -59,44 +59,42 @@ PUT test
     }
   },
   "mappings": {
-    "doc": {
-      "properties": {
-        "shopName": {
-          "type": "text",
-          "index": false
-        },
-        "product": {
-          "properties": {
-            "name": {
-              "type": "text",
-              "fields": {
-                "stemmed": {
-                  "type": "text",
-                  "analyzer": "english"
-                },
-                "prefixes": {
-                  "type": "text",
-                  "analyzer": "prefix",
-                  "search_analyzer": "standard"
-                },
-                "exact": {
-                  "type": "keyword",
-                  "normalizer": "lowercase"
-                }
+    "properties": {
+      "shopName": {
+        "type": "text",
+        "index": false
+      },
+      "product": {
+        "properties": {
+          "name": {
+            "type": "text",
+            "fields": {
+              "stemmed": {
+                "type": "text",
+                "analyzer": "english"
+              },
+              "prefixes": {
+                "type": "text",
+                "analyzer": "prefix",
+                "search_analyzer": "standard"
+              },
+              "exact": {
+                "type": "keyword",
+                "normalizer": "lowercase"
               }
-            },
-            "id": {
-              "type": "text",
-              "analyzer": "classic"
-            },
-            "type": {
-              "type": "keyword"
             }
+          },
+          "id": {
+            "type": "text",
+            "analyzer": "classic"
+          },
+          "type": {
+            "type": "keyword"
           }
-        },
-        "description": {
-          "type": "text"
         }
+      },
+      "description": {
+        "type": "text"
       }
     }
   }
@@ -105,7 +103,7 @@ PUT test
 
 And the sample document we want to analyze looks like this:
 ```
-PUT test/doc/1
+PUT test/_doc/1
 {
   "shopName": "Amazon",
   "product": {
@@ -214,7 +212,6 @@ Options
 
   -c, --cluster string   The Elasticsearch cluster to connect to                 
   -x, --index string     The index of the document to analyze                    
-  -t, --type string      The type of the document to analyze (defaults to "doc") 
   -i, --id string        The ID of the document to analyze                       
   -f, --format string    The output format (console, json, yaml)                 
   -h, --help             Usage help                                              
