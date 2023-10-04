@@ -1,0 +1,29 @@
+{
+  "name": "elastixray",
+  "version": "1.0.1",
+  "description": "X-Ray tool that shows the details of the Elasticsearch analysis process.",
+  "main": "elastixray.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/consulthys/ElastiXray.git"
+  },
+  "keywords": [
+    "elasticsearch",
+    "analysis"
+  ],
+  "author": "Val Crettaz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/consulthys/ElastiXray/issues"
+  },
+  "homepage": "https://github.com/consulthys/ElastiXray",
+  "dependencies": {
+    "@elastic/elasticsearch": "~8.10.0",
+    "command-line-args": "^5.1.1",
+    "command-line-usage": "^7.0.1",
+    "underscore": "^1.13.6"
+  }
+}
