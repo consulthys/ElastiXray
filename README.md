@@ -8,7 +8,7 @@ X-Ray tool that shows the details of the Elasticsearch analysis process.
  * [elyzer](https://github.com/o19s/elyzer) is a great tool, but it aims at showing what happens during each step of the analysis process and does not work with all built-in analyzers.
  * [inquisitor](https://github.com/polyfractal/elasticsearch-inquisitor) was a nice tool that went into a similar direction, but it's no longer maintained.
  * The official [Kibana](https://www.elastic.co/products/kibana) product doesn't provide any feature built upon the Analyze API, however...
- * ...there is a [Kibana plugin](https://github.com/johtani/analyze-api-ui-plugin) that provides a basic UI front-end to the Analyze API. 
+ * ...there is a [Kibana plugin](https://github.com/johtani/analyze-api-ui-plugin) that provides a basic UI front-end to the Analyze API, which has only been updated until version 7.17.0. 
  
 Enter ElastiXray...
 
