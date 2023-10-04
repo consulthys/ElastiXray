@@ -210,8 +210,8 @@ ElastiXray
 
 Options
 
-  -c, --cluster string   The Elasticsearch cluster to connect to                 
-  -a, --ca string        The path to the root CA certificate of your cluster                    
+  -c, --cluster string   The Elasticsearch cluster to connect to (e.g. `https://user:pass@localhost:9200`)                
+  -a, --ca string        The path to the root CA certificate of your cluster (needed when using self-generated certificates)                    
   -x, --index string     The index of the document to analyze                    
   -i, --id string        The ID of the document to analyze                       
   -f, --format string    The output format (console, json, yaml)                 
