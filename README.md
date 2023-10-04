@@ -217,3 +217,8 @@ Options
   -f, --format string    The output format (console, json, yaml)                 
   -h, --help             Usage help                                              
 ```
+
+## Future improvements
+
+* Show detailed steps of the analysis process after the tokenizer and each token filter runs ([#1](https://github.com/consulthys/ElastiXray/issues/1)).
+* Add the possibility of sending a full-text query (`match`, `multi_match`, etc) and discover how the search token would match the analyzed ones
