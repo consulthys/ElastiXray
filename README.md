@@ -211,6 +211,7 @@ ElastiXray
 Options
 
   -c, --cluster string   The Elasticsearch cluster to connect to                 
+  -a, --ca string        The path to the root CA certificate of your cluster                    
   -x, --index string     The index of the document to analyze                    
   -i, --id string        The ID of the document to analyze                       
   -f, --format string    The output format (console, json, yaml)                 
